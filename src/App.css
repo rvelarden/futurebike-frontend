@@ -1,38 +1,260 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS';
+ 
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #669fe9;
+  opacity: .8;
+  height: 7rem;
+  padding: 1rem;
+}
+
+#header img {
+  height: 10rem;
+  width: center;
+}
+
+#collection {
+  margin: 2rem;
+}
+
+
+
+.avatar {
+  justify-self: center;
+  height: 12rem;
+  width: auto;
+}
+
+.addconcert {
+  margin-left: 45%;
+}
+.buttonContainer {
+  text-align: center;
+  padding: 1rem;
+}
+
+button:hover {
+  background-color: whitesmoke;
+  border: #117e6c solid 1px;
+  color: #138361;
+}
+
+.add-form {
+  width: 80%;
+  margin-left: 25%;
+}
+
+.submit {
+  position: relative;
+  background-color: #326107;
+  border-radius: 4px;
+  height: 2rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 18px;
+  justify-self: center;
+  font-family: helvetica;
+  margin: 3px;
+}
+
+.submit:hover {
+  background-color: whitesmoke;
+  border: #402899 solid 1px;
+  color: #400aa3;
+}
+
+
+.input-text {
+  border-radius: 20px;
+  height: 2rem;
+  width: 60%;
+  font-size: 12px;
+  font-family: helvetica;
+  margin: 3px;
+  margin-right: 12%;
+}
+
+.search-bar {
+  background-color: rgb(39, 33, 33);
+  border: #402899 solid 1px;
+  color: #400aa3;
+  text-align: left;
+  font-size: 15px;
+  width: 25rem;
+  display: inline-grid;
+  margin: 2rem 3rem;
+  margin-right: 12px;
+  
+}
+
+
+.search-bar-div  {
+  background-image: url(https://cms.urbanarrow.com/data/default/styles/960x480/public/2020-01/Craft%20Header%20Fallback%202.jpg?itok=z_RZAuFd);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+
+.button-add-concert {
+  align-self: center;
+  margin-left: 50%;
+  text-align: center;
+  border: #402899 solid 1px;
+  padding: 1rem;
+}
+
+.logo-iconcert {
+  color: #f6f4fa;
+  
+}
+
+
+.logo {
+  height: 100px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.bannersingle {
+  color: rgb(250, 245, 245); 
+  text-align: center;
+  margin-top: 50px;
+  font-size: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .banner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+} */
+
+.banner{
+  background-image: url(https://cms.urbanarrow.com/data/default/styles/960x480/public/2020-01/Craft%20Header%20Fallback%202.jpg?itok=z_RZAuFdhttps://i.pinimg.com/originals/4f/46/51/4f4651c6fea58f3a35506a96c3220d84.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+
+.banner2 {
+  color: rgb(15, 15, 15);
+  width: 50%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  margin: auto;
+
+}
+
+.searchBox {
+  position: absolute;
+  margin-top: 15px;
+  left: 50%;
+  transform:  translate(-50%,50%);
+  background: #f6f5f7;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+
+}
+
+
+.searchButton {
   color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
 }
 
-.App-link {
-  color: #61dafb;
+.searchInput {
+  border:none;
+  background: none;
+  outline:none;
+  float:left;
+  padding: 0;
+  color: rgb(10, 1, 1);
+  font-size: 15px;
+  transition: 0.4s;
+  line-height: 20px;
+  width: 400px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.box-wrap{
+  /* position:relative; */
+  display:inline-block;
+  /* vertical-align: top; */
+  margin-top: 100px;
+  margin-left: 110px;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Kufam, 'Trebuchet MS', Kufam;
+}
+
+.drone-name {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Kufam, 'Trebuchet MS', Kufam;
+}
+
+
+
+.csslogout {
+  font-family: Arial, Helvetica, sans-serif;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  font-size: 18px;
+  color: whitesmoke;
+  
+}
+
+
+
+.loginform{
+  background-image: url("https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2018/09/maxresdefault1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  
+}
+
+.ui.color1.header {
+  color: #fff;
+}
+.ui.color2.header {
+  color: rgb(252, 249, 249);
+}
+.ui.color3.header {
+  color: rgb(141, 137, 137);
+}
+.ui.color4.header {
+  color: rgb(6, 135, 241);
+}
+.ui.color5.header {
+  color: rgb(204, 53, 7);
 }

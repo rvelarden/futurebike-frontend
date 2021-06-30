@@ -20,14 +20,13 @@ class Bike extends Component {
       <div className="box-wrap">
 
         <Card fluid >
-            <Image style={{ width: "400px", height: "260px", objectFit: "cover" }} src={this.props.bike.image} wrapped ui={true} />
+              <br></br>
+               <h2 class="ui color4 header">{this.props.bike.category}</h2>
+              <Image style={{ width: "400px", height: "260px", objectFit: "cover" }} src={this.props.bike.image} wrapped ui={true} />
               <Card.Content>
-              <Card.Header>
-      
-              <h2>{this.props.bike.model}</h2>
-              <h2 class="ui color4 header">{this.props.bike.category}</h2>
-              </Card.Header>
-     
+              <br></br>
+              <br></br>
+              <br></br>
               <Header>
               <div  class="ui segments">
   

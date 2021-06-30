@@ -10,29 +10,24 @@ const Search = (props) => {
       <br></br>
       <br></br>
       <br></br>
-      <img style={{ width: "90px", height: "90px", objectFit: "cover" }} className="logo" src="https://i.pinimg.com/originals/2e/d1/15/2ed115c13891fd913afe5d2f32dfa85f.jpg"></img>
+      <img style={{ width: "200px", height: "90px", objectFit: "cover" }} className="logo" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/bike-296852_960_720.png"></img>
         
     
       <div className="bannersingle" >
             <h2>Welcome back, Romina!</h2>
         </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-      <div className="bannersingle" >
+           
+        <div className="bannersingle" >
             <h1>Find Bike Category</h1>
         </div>
-      <div className="searchBox" >
-        <input
-         type="text"
-         placeholder={"Search Category by Industrial, Small Business or Personal"}
-         className="searchInput"
-         onChange={(e) => props.searchBar(e.target.value)}
-        />
-      </div>
+        <div className="searchBox" >
+          <input
+          type="text"
+          placeholder={"    Search Category by Parcel (Same Day), Food Delivery"}
+          className="searchInput"
+          onChange={(e) => props.searchBar(e.target.value)}
+          />
+        </div>
       
     </div>
   );

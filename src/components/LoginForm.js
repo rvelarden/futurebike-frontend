@@ -45,18 +45,18 @@ class LoginForm extends React.Component {
   render() {
         return (
  <div className="banner" >
-    <video autoPlay loop muted>
-    {/* <source src={Droneproject} type='video/mp4' /> */}
-</video>
+    {/* <video autoPlay loop muted>
+     <source src={'Droneproject'} type='video/mp4' /> 
+</video> */}
    <br></br>
       <Header as='h2' color='teal' textAlign='center'>
-        <Image style={{ width: "90px", height: "90px", objectFit: "cover" }} className="logo" title="bike" src="https://i.pinimg.com/originals/2e/d1/15/2ed115c13891fd913afe5d2f32dfa85f.jpg" />
+        <Image style={{ width: "200px", height: "90px", objectFit: "cover" }} className="logo" title="bike" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/bike-296852_960_720.png" />
       </Header>
     
   <Grid textAlign='center' style={{ height: '2vh' }} verticalAlign='middle' >
     <Grid.Column style={{ maxWidth: 450 }}>
       <Header as='h3'  textAlign='center' >
-      <h4 class="ui color2 header">E-Bike Renting Services</h4>
+      <h4 class="ui color2 header">Cargo E-Bike Renting Services</h4>
       </Header>
       <br></br>
       <Header as='h1'  textAlign='center' >
