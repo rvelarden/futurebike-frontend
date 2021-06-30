@@ -24,7 +24,7 @@ import { Card, Icon, Image, Header,Button } from 'semantic-ui-react'
         <Card.Content>
           <Card.Header>
           <img class="image" style={{ width: "250px", height: "150px", objectFit: "cover" }} src={this.props.booking.bike.image} />
-            <h2>{this.props.booking.bike.model}</h2>
+            
           </Card.Header>
            <Header as='h1' color='black' textAlign='center' font='helvetica'>
           </Header>

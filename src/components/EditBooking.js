@@ -7,8 +7,8 @@ import { Button, Form } from 'semantic-ui-react'
 class EditBooking extends React.Component{
     //state goes here
     state = {
-      from_address: '',
-      to_address: ''
+      pickup_time: '',
+      dropoff_time: ''
        
       }
 
@@ -16,8 +16,8 @@ class EditBooking extends React.Component{
       e.preventDefault()
       // console.log(this.props.updatedBookings)
         let editBooking = {
-          from_address: this.state.from_address,
-          to_address: this.state.to_address
+          pickup_time: this.state.pickup_time,
+          dropoff_time: this.state.dropoff_time
 //             
         }
         // console.log(editBooking)
@@ -45,33 +45,18 @@ render() {
       <br></br>
       <Form onSubmit={(e)=>this.toggleBooking(e, this.props.updatedBookings)}>
     <Form.Group widths='equal'>
-      <Form.Input type="text" name="name" placeholder=" From Address" onChange={(e)=>this.setState({from_address: e.target.value})}  value={this.props.from_address}/>
+      <Form.Input type="text" name="name" placeholder="pickup time" onChange={(e)=>this.setState({pickup_time: e.target.value})}  value={this.props.pickup_time}/>
     </Form.Group>
 
     <Form.Group widths='equal'>
-      <Form.Input type="text" name="name" placeholder=" To Address" onChange={(e)=>this.setState({to_address: e.target.value})}   value={this.props.to_address}/>
+      <Form.Input type="text" name="name" placeholder=" dropoff time" onChange={(e)=>this.setState({dropoff_time: e.target.value})}   value={this.props.dropoff_time}/>
     </Form.Group>
    
     <Button type="submit" name="submit" value="Submit" fluid size='small'  color='blue' >
            Submit
     </Button>
   </Form>
-    </div>
-  
-   
-      
-      // <Form onSubmit={(e)=>this.toggleBooking(e, this.props.updatedBookings)} className="add-form">
-      //   <br></br>
-      // <Form.Group widths='equal'>
-      //   <Form.Input type="text" name="name" placeholder=" From Address" onChange={(e)=>this.setState({from_address: e.target.value})}  value={this.props.from_address}/>
-        
-      //   <Form.Input type="text" name="name" placeholder=" To Address" onChange={(e)=>this.setState({to_address: e.target.value})}   value={this.props.to_address}/>
-      //   </Form.Group>
-      //   <Button type="submit" name="submit" value="Submit" fluid size='small'  color='blue' >
-      //       Submit
-      //     </Button>
-      // </Form>
-    
+    </div>    
     );
   }
     

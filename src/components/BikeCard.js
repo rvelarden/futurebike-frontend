@@ -21,6 +21,7 @@ class Bike extends Component {
 
         <Card fluid >
               <br></br>
+              <br></br>
                <h2 class="ui color4 header">{this.props.bike.category}</h2>
               <Image style={{ width: "400px", height: "260px", objectFit: "cover" }} src={this.props.bike.image} wrapped ui={true} />
               <Card.Content>

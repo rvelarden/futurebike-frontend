@@ -16,7 +16,8 @@ class BikeList extends Component {
             <h1>Available Bikes</h1>
             </Header>
             </div>
-            {this.props.bikes.map(bike => <BikeCard bike={bike} bikes={this.props.bikes} addNewBooking={this.props.addNewBooking}/>)}
+            {this.props.bikes.map(bike => <BikeCard key={bike.id} 
+            bike={bike} bikes={this.props.bikes} addNewBooking={this.props.addNewBooking}/>)}
             
         </div>
     )
