@@ -24,7 +24,7 @@ import { Card, Icon, Image, Header,Button } from 'semantic-ui-react'
         <Card.Content>
           <Card.Header>
           <img class="image" style={{ width: "250px", height: "150px", objectFit: "cover" }} src={this.props.booking.bike.image} />
-            
+          <h2>Category: {this.props.booking.bike.category}</h2>
           </Card.Header>
            <Header as='h1' color='black' textAlign='center' font='helvetica'>
           </Header>
@@ -32,8 +32,9 @@ import { Card, Icon, Image, Header,Button } from 'semantic-ui-react'
         </Card.Content>
         <Card.Content extra>
           
-            <h2>pickup_time: {this.props.booking.pickup_time}</h2>
-            <h2>dropoff_time: {this.props.booking.dropoff_time}</h2>
+            <h2>pickup time: {this.props.booking.pickup_time}</h2>
+            <h2>dropoff time: {this.props.booking.dropoff_time}</h2>
+            
          
         </Card.Content>
         <Card.Content extra>
@@ -48,12 +49,7 @@ import { Card, Icon, Image, Header,Button } from 'semantic-ui-react'
           </Button>
     </Card.Content>
       </Card>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+          
       </div>
     );
   }
