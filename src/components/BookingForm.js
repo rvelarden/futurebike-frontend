@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Button } from 'semantic-ui-react'
+import { Form, Button, Card } from 'semantic-ui-react'
 
 
 class BookingForm extends React.Component{
@@ -38,14 +38,23 @@ class BookingForm extends React.Component{
   <Form onSubmit={this.handleSubmit}>
     <br></br>
     
-    <Form.Group widths='equal'>
-      <Form.Input fluid placeholder='pickup_time' color='tile' onChange={(e)=>this.setState({pickup_time: e.target.value})} type="text" name="name" />
-      <Form.Input fluid placeholder='dropoff_time' color='tile' onChange={(e)=>this.setState({dropoff_time: e.target.value})} type="text" name="name" />
+    <Card.Content extra>
+      <Form.Input fluid placeholder='Pick-up Date' color='tile' onChange={(e)=>this.setState({pickup_time: e.target.value})} type="text" name="name" />
+      </Card.Content>
+      <Form.Input fluid placeholder='Drop-off Date' color='tile' onChange={(e)=>this.setState({dropoff_time: e.target.value})} type="text" name="name" />
       <select onChange={(e)=>this.setState({bike_id: e.target.value})}  className="input-text">
            <option>Select category</option>
               {this.props.bikes.map(bike => <option value={bike.id}>{bike.category}</option>)}
       </select>
-    </Form.Group>
+      <select onChange={(e)=>this.setState({bike_id: e.target.value})}  className="input-text">
+           <option>Pricing</option>
+              {this.props.bikes.map(bike => <option value={bike.id}>Daily price ${bike.price_day}</option>)}
+              {this.props.bikes.map(bike => <option value={bike.id}>Weekly Price ${bike.price_week}</option>)}
+              {this.props.bikes.map(bike => <option value={bike.id}>Monthly Price ${bike.price_month}</option>)}
+              {this.props.bikes.map(bike => <option value={bike.id}>Yearly Price ${bike.price_year}</option>)}
+      </select>
+     
+   
     
   
   

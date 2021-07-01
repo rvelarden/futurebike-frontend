@@ -204,11 +204,17 @@ button:hover {
 
 
 .box-wrap{
-  /* position:relative; */
   display:inline-block;
-  /* vertical-align: top; */
   margin-top: 100px;
   margin-left: 50px;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Kufam, 'Trebuchet MS', Kufam;
+}
+.box-wrap1{
+  display:inline-block;
+  margin-top: 100px;
+  margin-left: 150px;
   font-size: 20px;
   text-align: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Kufam, 'Trebuchet MS', Kufam;

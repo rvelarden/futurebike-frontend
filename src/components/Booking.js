@@ -31,11 +31,10 @@ import { Card, Icon, Image, Header,Button } from 'semantic-ui-react'
           
         </Card.Content>
         <Card.Content extra>
-          
             <h2>pickup time: {this.props.booking.pickup_time}</h2>
             <h2>dropoff time: {this.props.booking.dropoff_time}</h2>
-            
-         
+            <h2>Daily Price: ${this.props.booking.bike.price_day}</h2>
+          
         </Card.Content>
         <Card.Content extra>
         <Button  fluid size='small' secondary onClick={this.displayForm} >

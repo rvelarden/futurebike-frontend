@@ -17,7 +17,7 @@ class Bike extends Component {
 
     render() {
       return (
-      <div className="box-wrap">
+      <div className="box-wrap1">
 
         <Card fluid >
               <br></br>
