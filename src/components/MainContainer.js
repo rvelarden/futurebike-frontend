@@ -3,6 +3,7 @@ import BookingList from "./BookingList";
 import BikeList from "./BikeList";
 import SearchBar from "./SearchBar";
 
+
 class MainContainer extends Component {
 
 
@@ -76,7 +77,7 @@ class MainContainer extends Component {
     return (
       this.props.currentUser ?
       <div>
-       <SearchBar searchBar={this.searchBar} searchText={this.state.searchText}/>
+        <SearchBar searchBar={this.searchBar} searchText={this.state.searchText}/>
         <BikeList bikes={filteredBikes} bookings={this.state.bookings} addNewBooking={this.addNewBooking}/>
         <BookingList bookings={this.state.bookings} editBookingForm={this.editBookingForm} bikes={this.state.bikes} updatedBookings={this.state.updatedBookings} deleteBooking={this.deleteBooking}
         />

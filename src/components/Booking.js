@@ -1,9 +1,7 @@
 import EditBooking from "./EditBooking";
-// import React from "react"
 import React, { Component } from 'react';
 import { Card, Icon, Image, Header,Button } from 'semantic-ui-react'
 
-// const Booking = ({booking, clickAction, updatedBookings, showForm }) => {
   class Booking extends Component {
 
     state = {

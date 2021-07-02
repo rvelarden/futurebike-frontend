@@ -3,9 +3,9 @@ import { Route, Switch, Redirect, withRouter } from 'react-router-dom'
 import './App.css';
 import './index.js'
 import LoginForm from './components/LoginForm'
-// import NotFound from './'
 import MainContainer from './components/MainContainer'
 import Nav from './components/Nav'
+
 
 
 class App extends React.Component {
@@ -43,15 +43,13 @@ class App extends React.Component {
   return (
     <Fragment>
        <Nav user={this.state.currentUser} updateCurrentUser={this.updateCurrentUser}/>
-    <Switch>
+      <Switch>
       <Route exact path='/' render={()=> <Redirect to='/login' />}/>
-      {/* <Route exact path="/" component={LoginForm} /> */}
       <Route exact path= '/MainContainer' render={()=>(
       this.state.currentUser ? <MainContainer currentUser={this.state.currentUser}/> : <Redirect to='/login'/>)} />
       <Route exact path='/login' render={()=> (
       this.state.currentUser == null ? <LoginForm updateCurrentUser={this.updateCurrentUser} /> : <Redirect to='/MainContainer/'/>)} />
-      {/* <Route component={NotFound} /> */}
-    </Switch>
+      </Switch>
     </Fragment>
     ) 
   }
