@@ -21,7 +21,7 @@ import { Card, Icon, Image, Header,Button } from 'semantic-ui-react'
         <Image  wrapped ui={false} />
         <Card.Content>
           <Card.Header>
-          <img class="image" style={{ width: "250px", height: "150px", objectFit: "cover" }} src={this.props.booking.bike.image} />
+          <img class="image" style={{ width: "250px", height: "190px", objectFit: "cover" }} src={this.props.booking.bike.image} />
           <h2>Category: {this.props.booking.bike.category}</h2>
           </Card.Header>
            <Header as='h1' color='black' textAlign='center' font='helvetica'>
@@ -29,8 +29,8 @@ import { Card, Icon, Image, Header,Button } from 'semantic-ui-react'
           
         </Card.Content>
         <Card.Content extra>
-            <h2>pickup time: {this.props.booking.pickup_time}</h2>
-            <h2>dropoff time: {this.props.booking.dropoff_time}</h2>
+            <h2>pickup location: {this.props.booking.pickup_location}</h2>
+            <h2>dropoff location: {this.props.booking.dropoff_location}</h2>
             <h2>Daily Price: ${this.props.booking.bike.price_day}</h2>
           
         </Card.Content>

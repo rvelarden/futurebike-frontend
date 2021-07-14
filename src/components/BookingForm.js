@@ -5,8 +5,8 @@ import Calendar from "./calendar/index.js"
 class BookingForm extends React.Component{
     
     state = {
-        pickup_time: '',
-        dropoff_time: '',
+        pickup_location: '',
+        dropoff_location: '',
         bike_id: '',
         bookings: []
       }
@@ -15,8 +15,8 @@ class BookingForm extends React.Component{
         e.preventDefault()
         // console.log(this.state)
         let newBooking = {
-          pickup_time: this.state.pickup_time,
-          dropoff_time: this.state.dropoff_time,
+          pickup_location: this.state.pickup_location,
+          dropoff_location: this.state.dropoff_location,
           bike_id: this.state.bike_id
           
         }
@@ -53,10 +53,11 @@ class BookingForm extends React.Component{
         <br></br>
         <br></br>
         <Card.Content extra>
-          <Form.Input fluid placeholder='Pick-up Date' color='tile' onChange={(e)=>this.setState({pickup_time: e.target.value})} type="text" name="name" />
+          <Form.Input fluid placeholder='Pick-up location' color='tile' onChange={(e)=>this.setState({pickup_location: e.target.value})} type="text" name="name" />
           
           </Card.Content>
-          <Form.Input fluid placeholder='Drop-off Date' color='tile' onChange={(e)=>this.setState({dropoff_time: e.target.value})} type="text" name="name" />
+          <Form.Input fluid placeholder='Drop-off location' color='tile' onChange={(e)=>this.setState({dropoff_location: e.target.value})} type="text" name="name" />
+          
           <select onChange={(e)=>this.setState({bike_id: e.target.value})}  className="input-text">
               <option>Select category</option>
                   {this.props.bikes.map(bike => <option value={bike.id}>{bike.category}</option>)}
