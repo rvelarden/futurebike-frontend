@@ -1,15 +1,28 @@
 import React from 'react'
 import { Form, Button, Card } from 'semantic-ui-react'
 import Calendar from "./calendar/index.js"
+import PlacesAutocomplete, {
+  
+} from 'react-places-autocomplete';
 
 class BookingForm extends React.Component{
-    
+
     state = {
         pickup_location: '',
         dropoff_location: '',
         bike_id: '',
         bookings: []
       }
+
+      handleChange = (pickup_location, dropoff_location) => {
+        this.setState({ pickup_location });
+       
+       
+      };
+      handleChangeInput = (dropoff_location) => {
+        this.setState({ dropoff_location });
+       
+      };
     
       handleSubmit = (e) => {
         e.preventDefault()
@@ -35,7 +48,9 @@ class BookingForm extends React.Component{
 
       render() {
       return ( 
+        
         <Form onSubmit={this.handleSubmit}>
+          
         <Calendar/>
         <br></br>
         <br></br>
@@ -53,10 +68,47 @@ class BookingForm extends React.Component{
         <br></br>
         <br></br>
         <Card.Content extra>
-          <Form.Input fluid placeholder='Pick-up location' color='tile' onChange={(e)=>this.setState({pickup_location: e.target.value})} type="text" name="name" />
+        <PlacesAutocomplete
+            value={this.state.pickup_location}
+            onChange={this.handleChange}
+            // onSelect={this.handleSelect}
+           
+            >{({getInputProps, suggestions, getSuggestionItemProps, loading})=>(<div>
+                
+                <input{...getInputProps({placeholder: "type address"})} />
+                <div>
+                    {loading ? <div>...loading</div> : null}
+                    {suggestions.map(suggestion=>{
+                        const style = {
+                        backgroundColor: suggestion.active ? "#fd5f00" : "#fff7f7"
+                        }
+                    return <div{...getSuggestionItemProps(suggestion,{style})}>{suggestion.description}</div>
+                    })}
+                </div>
+            </div>)}</PlacesAutocomplete>
+
+        <PlacesAutocomplete
+            value={this.state.dropoff_location}
+            onChange={this.handleChangeInput}
+            // onSelect={this.handleSelect}
+           
+            >{({getInputProps, suggestions, getSuggestionItemProps, loading})=>(<div>
+                
+                <input{...getInputProps({placeholder: "drop-off address"})} />
+                <div>
+                    {loading ? <div>...loading</div> : null}
+                    {suggestions.map(suggestion=>{
+                        const style = {
+                        backgroundColor: suggestion.active ? "#fd5f00" : "#fff7f7"
+                        }
+                    return <div{...getSuggestionItemProps(suggestion,{style})}>{suggestion.description}</div>
+                    })}
+                </div>
+            </div>)}</PlacesAutocomplete>
+          {/* <Form.Input fluid placeholder='Pick-up location' color='tile' onChange={(e)=>this.setState({pickup_location: e.target.value})} type="text" name="name" /> */}
           
           </Card.Content>
-          <Form.Input fluid placeholder='Drop-off location' color='tile' onChange={(e)=>this.setState({dropoff_location: e.target.value})} type="text" name="name" />
+          {/* <Form.Input fluid placeholder='Drop-off location' color='tile' onChange={(e)=>this.setState({dropoff_location: e.target.value})} type="text" name="name" /> */}
           
           <select onChange={(e)=>this.setState({bike_id: e.target.value})}  className="input-text">
               <option>Select category</option>
