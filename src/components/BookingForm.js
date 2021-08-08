@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form, Button, Card } from 'semantic-ui-react'
-import Calendar from "./calendar/index.js"
+
 import PlacesAutocomplete, {
   
 } from 'react-places-autocomplete';
@@ -14,9 +14,8 @@ class BookingForm extends React.Component{
         bookings: []
       }
 
-      handleChange = (pickup_location, dropoff_location) => {
+      handleChange = (pickup_location) => {
         this.setState({ pickup_location });
-       
        
       };
       handleChangeInput = (dropoff_location) => {
@@ -50,32 +49,15 @@ class BookingForm extends React.Component{
       return ( 
         
         <Form onSubmit={this.handleSubmit}>
-          
-        <Calendar/>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <Card.Content extra>
-        <PlacesAutocomplete
+          <Card.Content extra>
+          <PlacesAutocomplete
             value={this.state.pickup_location}
             onChange={this.handleChange}
             // onSelect={this.handleSelect}
            
             >{({getInputProps, suggestions, getSuggestionItemProps, loading})=>(<div>
                 
-                <input{...getInputProps({placeholder: "type address"})} />
+                <input{...getInputProps({placeholder: "pick-up address"})} />
                 <div>
                     {loading ? <div>...loading</div> : null}
                     {suggestions.map(suggestion=>{
@@ -87,10 +69,10 @@ class BookingForm extends React.Component{
                 </div>
             </div>)}</PlacesAutocomplete>
 
-        <PlacesAutocomplete
+          <PlacesAutocomplete
             value={this.state.dropoff_location}
             onChange={this.handleChangeInput}
-            // onSelect={this.handleSelect}
+            onSelect={this.handleChangeInput}
            
             >{({getInputProps, suggestions, getSuggestionItemProps, loading})=>(<div>
                 
@@ -108,8 +90,6 @@ class BookingForm extends React.Component{
           {/* <Form.Input fluid placeholder='Pick-up location' color='tile' onChange={(e)=>this.setState({pickup_location: e.target.value})} type="text" name="name" /> */}
           
           </Card.Content>
-          {/* <Form.Input fluid placeholder='Drop-off location' color='tile' onChange={(e)=>this.setState({dropoff_location: e.target.value})} type="text" name="name" /> */}
-          
           <select onChange={(e)=>this.setState({bike_id: e.target.value})}  className="input-text">
               <option>Select category</option>
                   {this.props.bikes.map(bike => <option value={bike.id}>{bike.category}</option>)}
@@ -122,14 +102,14 @@ class BookingForm extends React.Component{
                   {this.props.bikes.map(bike => <option value={bike.id}>Yearly Price ${bike.price_year}</option>)}
           </select>
      
-   
-    
-  
-  
-  <Button type="submit" name="submit" value="Submit" fluid size='small'  color='blue' >
-            Submit
-          </Button>
-  </Form>
+          
+            
+          
+          
+          <Button type="submit" name="submit" value="Submit" fluid size='small'  color='blue' >
+                    Submit
+                  </Button>
+          </Form>
         )
       }
     }
