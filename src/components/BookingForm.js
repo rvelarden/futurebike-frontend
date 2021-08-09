@@ -62,7 +62,7 @@ class BookingForm extends React.Component{
                     {loading ? <div>...loading</div> : null}
                     {suggestions.map(suggestion=>{
                         const style = {
-                        backgroundColor: suggestion.active ? "#fd5f00" : "#fff7f7"
+                        backgroundColor: suggestion.active ? "#39BAE8" : "#ffffff"
                         }
                     return <div{...getSuggestionItemProps(suggestion,{style})}>{suggestion.description}</div>
                     })}
@@ -81,7 +81,7 @@ class BookingForm extends React.Component{
                     {loading ? <div>...loading</div> : null}
                     {suggestions.map(suggestion=>{
                         const style = {
-                        backgroundColor: suggestion.active ? "#fd5f00" : "#fff7f7"
+                        backgroundColor: suggestion.active ? "#fd5f00" : "#ffffff"
                         }
                     return <div{...getSuggestionItemProps(suggestion,{style})}>{suggestion.description}</div>
                     })}
@@ -94,13 +94,14 @@ class BookingForm extends React.Component{
               <option>Select category</option>
                   {this.props.bikes.map(bike => <option value={bike.id}>{bike.category}</option>)}
           </select>
-          <select onChange={(e)=>this.setState({bike_id: e.target.value})}  className="input-text">
+          {/* <select onChange={(e)=>this.setState({bike_id: e.target.value})}  className="input-text"
+          >
               <option>Pricing</option>
                   {this.props.bikes.map(bike => <option value={bike.id}>Daily price ${bike.price_day}</option>)}
                   {this.props.bikes.map(bike => <option value={bike.id}>Weekly Price ${bike.price_week}</option>)}
                   {this.props.bikes.map(bike => <option value={bike.id}>Monthly Price ${bike.price_month}</option>)}
                   {this.props.bikes.map(bike => <option value={bike.id}>Yearly Price ${bike.price_year}</option>)}
-          </select>
+          </select> */}
      
           
             

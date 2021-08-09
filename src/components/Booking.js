@@ -31,7 +31,7 @@ import { Card, Icon, Image, Header,Button } from 'semantic-ui-react'
         <Card.Content extra>
             <h2>pickup location: {this.props.booking.pickup_location}</h2>
             <h2>dropoff location: {this.props.booking.dropoff_location}</h2>
-            <h2>Daily Price: ${this.props.booking.bike.price_day}</h2>
+            {/* <h2>Daily Price: ${this.props.booking.bike.price_day}</h2> */}
           
         </Card.Content>
         <Card.Content extra>
