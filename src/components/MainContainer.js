@@ -13,7 +13,7 @@ class MainContainer extends Component {
         bookings: [],
         updatedBookings: {},
         user: null 
-        
+      
       }
     
 
